@@ -217,12 +217,17 @@ nav li:first-child a:hover {
 .margin-top > * {
     margin-top: 15px;
 }
+/* Tag reset since iOS is finnicky */
+a {
+    text-decoration: none;
+}
 .card-link {
     min-width: 200px;
     height: 200px;
     flex-grow: 1;
     text-decoration: none;
     flex-basis: calc(20% - 200px);
+    color: black;
 }
 h1 {
     font-size: var(--fs-600);
