@@ -1,0 +1,277 @@
+/* The :root section should be used for declaring global variables. */
+:root {
+    --color-scheme: light;
+    --font-family: system-ui;
+    --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+    --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+    --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+    --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+    --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+}
+
+/* Standard resets and default fonts; color schemes. */
+* {
+    font-family: var(--font-family);
+    color-scheme: var(--color-scheme);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Related CSS */
+nav {
+    box-shadow: 3px 3px 5px hsl(0 0 0);
+    background-color: white;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: large;
+}
+
+nav a:hover {
+    background-color: lightgrey;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+nav li:first-child a:hover {
+    background-color: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 10;
+    background-color: white;
+    backdrop-filter: blur(5px);
+    box-shadow: -5px 0 5px black;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu {
+    display: none;
+}
+
+@media(max-width: 1024px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
+
+@media(max-width: 480px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+/* Navigation End */
+
+/* Main Grid -- UNUSED */
+.content {
+    --gap: clamp(1rem, 6vw, 3rem);
+    --full: minmax(var(--gap), 1fr);
+    --content: min(50ch, 100% - var(--gap) * 2);
+
+    display: grid;
+    grid-template-columns: 
+        [full-start] var(--full) 
+        [content-start] var(--content) 
+        [content-end] var(--full) 
+        [full-end];
+}
+
+.content>* {
+    grid-column: content;
+}
+
+.full {
+    grid-column: full;
+}
+/* End Grid */
+
+.logo {
+    height: 46px;
+    padding-inline-end: 10px;
+}
+
+.container-header {
+    width: 100%;
+    position: relative;
+}
+
+.membership-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-inline: 20%;
+    height: auto;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+.card:hover{
+    animation-duration: 1s;
+    transform: rotateZ(5deg);
+}
+.card .card-inner {
+    padding-inline: 10px;
+}
+
+.card h2 {
+    font-size: var(--fs-500);
+}
+
+.card p {
+    font-size: var(--fs-300);
+}
+
+.card .price-label {
+    font-size: var(--fs-400);
+}
+
+.header-popup {
+    position: absolute;
+    left: 15%;
+    top: calc(50% - 175px);
+    background-color: white;
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+}
+
+.flex-column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+h1 {
+    font-size: var(--fs-600);
+}
+
+p {
+    font-size: var(--fs-400);
+}
+
+/* Button Styles */
+.button-3 {
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+.button-3:hover {
+    background-color: #2c974b;
+}
+
+.button-3:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+}
+
+.button-3:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+}
+
+.button-3:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+/* End Button */
+
+.debug{
+    border: 2px solid purple;
+}
