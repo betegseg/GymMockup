@@ -21,15 +21,22 @@
     padding: 0;
     margin: 0;
 }
-html, body {
+
+html,
+body {
     height: 100%;
 }
+
 body {
-    display: flex; flex-direction: column; min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 main {
     flex: 1;
 }
+
 /* Navigation Related CSS */
 nav {
     box-shadow: 3px 3px 5px hsl(0 0 0);
@@ -246,6 +253,7 @@ nav li:first-child a:hover {
 h1 {
     font-size: var(--fs-600);
 }
+
 footer {
     background-color: hsl(28, 100%, 41%);
     color: white;
@@ -259,6 +267,7 @@ footer {
 p {
     font-size: var(--fs-400);
 }
+
 /* Button Styles */
 .button-3 {
     appearance: none;
@@ -324,6 +333,7 @@ p {
 .slide {
     display: none;
 }
+
 .previous-button,
 .next-button {
     cursor: pointer;
@@ -385,7 +395,7 @@ p {
     background-color: #717171;
 }
 
-.gallery-container > div{
+.gallery-container>div {
     animation-name: fade;
     animation-duration: 1.5s;
 }
