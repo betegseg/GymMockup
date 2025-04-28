@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beteg Studios</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -24,7 +23,8 @@
             <li><a href="faq.html">FAQs</a></li>
         </ul>
         <ul>
-            <li class="font-wt-bold"><a href="index.html"><img src="resources/logo.png" class="logo"><span class="">B</span>eteg <span class="">S</span>tudios</a></li>
+            <li class="font-wt-bold"><a href="index.html"><img src="resources/logo.png" class="logo"><span
+                        class="">B</span>eteg <span class="">S</span>tudios</a></li>
             <li class="hideOnMobile"><a href="#">About</a></li>
             <li class="hideOnMobile"><a href="#">Contact Us</a></li>
             <li class="hideOnMobile"><a href="faq.html">FAQs</a></li>
@@ -53,11 +53,43 @@
     <!-- End Header Video -->
 
     <!-- Start Main Content -->
-    <main> <!-- Main is redundant. Keep until finished. -->
+    <main>
         <section id="ourgym" class="clr-bg-orange wrapper-padded">
             <h1 class="center-text">Only the best for you!</h1>
             <p class="center-text">Come and take a look at our state-of-the-art gym facility. Here at Beteg
                 Studios we only offer top-tier workout machines and weights.</p>
+        <div class="gallery-container"><!-- Image Gallery Container -->
+            <div class="slide">
+                <div class="slide-number">1 / 4</div>
+                <img src="resources/design-and-equipment-in-modern-gym-modern-of-gym-interior-with-equipment-sport-SBI-349571842-preview.jpg" style="width: 100%">
+                <div class="caption">Shock Cable Machines and Smith Machine</div>
+            </div>
+            <div class="slide">
+                <div class="slide-number">2 / 4</div>
+                <img src="resources/design-and-equipment-in-modern-gym-modern-of-gym-interior-with-equipment-sport-SBI-351626355-preview.jpg" style="width: 100%">
+                <div class="caption">Top Tier Elipticals</div>
+            </div>
+            <div class="slide">
+                <div class="slide-number">3 / 4</div>
+                <img src="resources/interior-of-modern-fitness-gym-a-lot-of-modern-athletic-trainer-SBI-350624113-preview.jpg" style="width: 100%">
+                <div class="caption">Plate Shoulder Press</div>
+            </div>
+            <div class="slide">
+                <div class="slide-number">4 / 4</div>
+                <img src="resources/young-man-doing-the-clean-and-jerk-weightlifting-exercise-at-the-gym-man-doing-SBI-351549128-preview.jpg" style="width: 100%">
+                <div class="caption">Dedicated Free-weight Area</div>
+            </div>
+            <!-- Buttons -->
+            <a class="previous-button" onclick=changeSlide(-1)>&#10094;</a>
+            <a class="next-button" onclick=changeSlide(1)>&#10095;</a>
+            <!-- Dimples -->
+            <div style="text-align: center;">
+                <span class="dimple" onclick=currentSlide(1)></span>
+                <span class="dimple" onclick=currentSlide(2)></span>
+                <span class="dimple" onclick=currentSlide(3)></span>
+                <span class="dimple" onclick=currentSlide(4)></span>
+            </div>
+        </div>
         </section>
         <section id="memberships" class="margin-top wrapper">
             <h1 class="center-text">Membership Plans</h1>
@@ -113,5 +145,6 @@
     </main>
     <!-- End Main Content -->
 </body>
-
+<!-- ALL STOCK IMAGES / VIDEOS ARE FROM STORYBLOCKS -->
+<script src="script.js"></script>
 </html>

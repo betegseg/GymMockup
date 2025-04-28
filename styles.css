@@ -112,6 +112,7 @@ nav li:first-child a:hover {
         width: 100%;
     }
 }
+
 /* Navigation End */
 
 .logo {
@@ -132,7 +133,7 @@ nav li:first-child a:hover {
     height: auto;
 }
 
-.card{
+.card {
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -145,11 +146,13 @@ nav li:first-child a:hover {
     transition: transform .5s ease-in-out;
     perspective: 1000px;
 }
-.card:hover{
+
+.card:hover {
     transform: rotate(3deg);
     background-color: hsl(28, 100%, 50%);
     color: white;
 }
+
 .card-inner {
     padding-inline: 10px;
 }
@@ -189,25 +192,31 @@ nav li:first-child a:hover {
 .center-text {
     text-align: center;
 }
+
 .wrapper {
     margin-inline: var(--global-wrapper);
 }
+
 .wrapper-padded {
     margin-inline: 0;
     padding-inline: var(--global-wrapper);
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
 .margin-top {
     margin-top: 15px;
 }
-.margin-top > * {
+
+.margin-top>* {
     margin-top: 15px;
 }
-.clr-bg-orange{
+
+.clr-bg-orange {
     background-color: hsl(28, 100%, 50%);
     color: white;
 }
+
 .clr-ft-orange {
     color: hsl(28, 100%, 50%);
 }
@@ -221,10 +230,11 @@ nav li:first-child a:hover {
     height: 200px;
     flex-grow: 1;
     text-decoration: none;
-    
+
     flex-basis: calc(20% - 200px);
     color: black;
 }
+
 h1 {
     font-size: var(--fs-600);
 }
@@ -284,8 +294,95 @@ p {
     background-color: hsl(28, 100%, 41%);
     box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
+
 /* End Button */
 
-.debug{
+/* Hexagonal Gallery */
+.gallery-container {
+    max-width: 1000px;
+    position: relative;
+    margin-inline: auto;
+}
+
+.slide {
+    display: none;
+}
+.previous-button,
+.next-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next-button {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previous-button:hover,
+.next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption {
+    color: white;
+    font-size: var(--fs-300);
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.slide-number {
+    color: white;
+    font-size: var(--fs-300);
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dimple {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dimple:hover {
+    background-color: #717171;
+}
+
+.gallery-container > div{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* End Hexagonal Gallery */
+.debug {
     border: 2px solid purple;
 }
