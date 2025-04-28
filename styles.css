@@ -238,11 +238,18 @@ nav li:first-child a:hover {
 h1 {
     font-size: var(--fs-600);
 }
+footer {
+    background-color: hsl(28, 100%, 41%);
+    color: white;
+    padding-inline: var(--global-wrapper);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: var(--fs-300);
+}
 
 p {
     font-size: var(--fs-400);
 }
-
 /* Button Styles */
 .button-3 {
     appearance: none;
@@ -297,11 +304,12 @@ p {
 
 /* End Button */
 
-/* Hexagonal Gallery */
+/* Gallery */
 .gallery-container {
-    max-width: 1000px;
+    max-width: 100%;
     position: relative;
     margin-inline: auto;
+    background-color: hsl(28, 100%, 50%);
 }
 
 .slide {
@@ -313,7 +321,7 @@ p {
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
+    margin-top: -32px;
     padding: 16px;
     color: white;
     font-weight: bold;
@@ -341,6 +349,7 @@ p {
     bottom: 20px;
     width: 100%;
     text-align: center;
+    background-color: hsla(0, 0%, 0%, 0.391);
 }
 
 .slide-number {
@@ -382,7 +391,7 @@ p {
     }
 }
 
-/* End Hexagonal Gallery */
+/* End Gallery */
 .debug {
     border: 2px solid purple;
 }
