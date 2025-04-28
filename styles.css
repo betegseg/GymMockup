@@ -271,7 +271,6 @@ footer {
     background-color: hsl(28, 100%, 41%);
     color: white;
     padding-inline: var(--global-wrapper);
-    padding-top: 15px;
     padding-bottom: 15px;
     font-size: var(--fs-300);
     width: 100%;
