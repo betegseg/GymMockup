@@ -111,7 +111,14 @@ nav li:first-child a:hover {
 .menu {
     display: none;
 }
-
+.about {
+    float: left;
+    max-width: 400px;
+    margin: 0 15px 15px 0;
+}
+.about-text{
+    font-size: var(--fs-400);
+}
 @media(max-width: 1024px) {
     .hideOnMobile {
         display: none;
@@ -119,6 +126,12 @@ nav li:first-child a:hover {
 
     .menu {
         display: block;
+    }
+    .about {
+        float: none;
+        display: block;
+        margin-inline: auto;
+        width: 100%;
     }
 }
 
@@ -365,7 +378,7 @@ p {
     font-size: var(--fs-300);
     padding: 8px 12px;
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     width: 100%;
     text-align: center;
     background-color: hsla(0, 0%, 0%, 0.391);
