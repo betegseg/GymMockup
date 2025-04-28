@@ -9,6 +9,8 @@
     --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
     --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
     --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+
+    --global-wrapper: clamp(3vw, 15%, 20%);
 }
 
 /* Standard resets and default fonts; color schemes. */
@@ -52,7 +54,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: lightgrey;
+    background-color: hsl(28, 100%, 50%);
+    color: white;
 }
 
 nav li:first-child {
@@ -111,29 +114,6 @@ nav li:first-child a:hover {
 }
 /* Navigation End */
 
-/* Main Grid -- UNUSED */
-.content {
-    --gap: clamp(1rem, 6vw, 3rem);
-    --full: minmax(var(--gap), 1fr);
-    --content: min(50ch, 100% - var(--gap) * 2);
-
-    display: grid;
-    grid-template-columns: 
-        [full-start] var(--full) 
-        [content-start] var(--content) 
-        [content-end] var(--full) 
-        [full-end];
-}
-
-.content>* {
-    grid-column: content;
-}
-
-.full {
-    grid-column: full;
-}
-/* End Grid */
-
 .logo {
     height: 46px;
     padding-inline-end: 10px;
@@ -149,7 +129,6 @@ nav li:first-child a:hover {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-    margin-inline: 20%;
     height: auto;
 }
 
@@ -168,8 +147,10 @@ nav li:first-child a:hover {
 }
 .card:hover{
     transform: rotate(3deg);
+    background-color: hsl(28, 100%, 50%);
+    color: white;
 }
-.card .card-inner {
+.card-inner {
     padding-inline: 10px;
 }
 
@@ -209,7 +190,13 @@ nav li:first-child a:hover {
     text-align: center;
 }
 .wrapper {
-    margin-inline: clamp(6vw, 20%, 30%)
+    margin-inline: var(--global-wrapper);
+}
+.wrapper-padded {
+    margin-inline: 0;
+    padding-inline: var(--global-wrapper);
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .margin-top {
     margin-top: 15px;
@@ -217,15 +204,24 @@ nav li:first-child a:hover {
 .margin-top > * {
     margin-top: 15px;
 }
-/* Tag reset since iOS is finnicky */
-a {
-    text-decoration: none;
+.clr-bg-orange{
+    background-color: hsl(28, 100%, 50%);
+    color: white;
 }
+.clr-ft-orange {
+    color: hsl(28, 100%, 50%);
+}
+
+.font-wt-bold {
+    font-weight: bold;
+}
+
 .card-link {
     min-width: 200px;
     height: 200px;
     flex-grow: 1;
     text-decoration: none;
+    
     flex-basis: calc(20% - 200px);
     color: black;
 }
@@ -240,7 +236,7 @@ p {
 /* Button Styles */
 .button-3 {
     appearance: none;
-    background-color: #2ea44f;
+    background-color: hsl(28, 100%, 50%);
     border: 1px solid rgba(27, 31, 35, .15);
     border-radius: 6px;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
@@ -269,7 +265,7 @@ p {
 }
 
 .button-3:hover {
-    background-color: #2c974b;
+    background-color: hsl(28, 100%, 45%);
 }
 
 .button-3:focus {
@@ -285,7 +281,7 @@ p {
 }
 
 .button-3:active {
-    background-color: #298e46;
+    background-color: hsl(28, 100%, 41%);
     box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 /* End Button */

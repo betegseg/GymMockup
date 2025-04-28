@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beteg Studios</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <!-- Start Navigation Bar -->
     <nav>
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
@@ -19,19 +21,22 @@
                     </svg></a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li><a href="faq.html">FAQs</a></li>
         </ul>
         <ul>
-            <li><a href="index.html"><img src="resources/logo.png" class="logo"><strong>Beteg Studios</strong></a></li>
+            <li class="font-wt-bold"><a href="index.html"><img src="resources/logo.png" class="logo"><span class="">B</span>eteg <span class="">S</span>tudios</a></li>
             <li class="hideOnMobile"><a href="#">About</a></li>
             <li class="hideOnMobile"><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li class="hideOnMobile"><a href="faq.html">FAQs</a></li>
             <li class="menu" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
                         viewBox="0 -960 960 960" width="24px" fill="#000000">
                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                     </svg></a></li>
         </ul>
     </nav>
+    <!-- End Navigation Bar-->
+
+    <!-- Start Header Video -->
     <div class="container-header">
         <video src="resources/samplevid.mp4" preload="auto" width="100%" autoplay muted loop
             style="display: block;"></video>
@@ -45,64 +50,68 @@
             </div>
         </div>
     </div>
-    <main>
-        <section class="margin-top">
+    <!-- End Header Video -->
+
+    <!-- Start Main Content -->
+    <main> <!-- Main is redundant. Keep until finished. -->
+        <section id="ourgym" class="clr-bg-orange wrapper-padded">
+            <h1 class="center-text">Only the best for you!</h1>
+            <p class="center-text">Come and take a look at our state-of-the-art gym facility. Here at Beteg
+                Studios we only offer top-tier workout machines and weights.</p>
+        </section>
+        <section id="memberships" class="margin-top wrapper">
             <h1 class="center-text">Membership Plans</h1>
-            <p class="center-text">Choose from one of our plans to get started. Memberships are limited to one per device. Check out our FAQs for more information <a href="faq.html">here</a>.</p>
+            <p class="center-text">Choose from one of our plans to get started. Memberships are limited to one per
+                device. Check out our FAQs for more information <a href="faq.html">here</a>.</p>
             <div class="membership-container">
-                <a class="card-link" href="sales-endpoint.html"><div class="card">
-                    <div class="card-inner">
-                        <h2>Single Plan</h2>
-                        <p>Starting at</p>
-                        <span class="price-label">$39.99</span>
-                        <span>/ mo.</span>
-                        <p>*One Access Pass</p>
+                <a class="card-link" href="sales-endpoint.html">
+                    <div class="card">
+                        <div class="card-inner">
+                            <h2>Single Plan</h2>
+                            <p>Starting at</p>
+                            <span class="price-label">$39.99</span>
+                            <span>/ mo.</span>
+                            <p>*One Access Pass</p>
+                        </div>
                     </div>
-                </div></a>
-                <a class="card-link" href="sales-endpoint.html"><div class="card">
-                    <div class="card-inner">
-                        <h2>Double Plan</h2>
-                        <p>Starting at</p>
-                        <span class="price-label">$59.99</span>
-                        <span>/ mo.</span>
-                        <p class="">*Two Access Passes</p>
+                </a>
+                <a class="card-link" href="sales-endpoint.html">
+                    <div class="card">
+                        <div class="card-inner">
+                            <h2>Double Plan</h2>
+                            <p>Starting at</p>
+                            <span class="price-label">$59.99</span>
+                            <span>/ mo.</span>
+                            <p class="">*Two Access Passes</p>
+                        </div>
                     </div>
-                </div></a>
-                <a class="card-link" href="sales-endpoint.html"><div class="card">
-                    <div class="card-inner">
-                        <h2>Family Plan</h2>
-                        <p>Starting at</p>
-                        <span class="price-label">$89.99</span>
-                        <span>/ mo.</span>
-                        <p class="">*Four Access Passes</p>
+                </a>
+                <a class="card-link" href="sales-endpoint.html">
+                    <div class="card">
+                        <div class="card-inner">
+                            <h2>Family Plan</h2>
+                            <p>Starting at</p>
+                            <span class="price-label">$89.99</span>
+                            <span>/ mo.</span>
+                            <p class="">*Four Access Passes</p>
+                        </div>
                     </div>
-                </div></a>
-                <a class="card-link" href="sales-endpoint.html"><div class="card">
-                    <div class="card-inner">
-                        <h2>Day Pass</h2>
-                        <p>Starting at</p>
-                        <span class="price-label">$14.99</span>
-                        <span>/ day</span>
-                        <p class="">*One Access Pass</p>
+                </a>
+                <a class="card-link" href="sales-endpoint.html">
+                    <div class="card">
+                        <div class="card-inner">
+                            <h2>Day Pass</h2>
+                            <p>Starting at</p>
+                            <span class="price-label">$14.99</span>
+                            <span>/ day</span>
+                            <p class="">*One Access Pass</p>
+                        </div>
                     </div>
-                </div></a>
+                </a>
             </div>
         </section>
-        <h1 class="center-text margin-top">Only the best for you!</h1>
-        <p class="center-text margin-top">Come and take a look at our state-of-the-art gym facility. Here at Beteg
-            Studios we only offer top-tier workout machines and weights.</p>
-
     </main>
-    <script>
-        function showSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
-    </script>
+    <!-- End Main Content -->
 </body>
 
 </html>
